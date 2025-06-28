@@ -1,17 +1,19 @@
 <!-- Cross device personal link collection -->
-<!-- Laptop: 310px -->
+<!-- @media screen and (device-width: 360px), (device-height: 360px) -->
 
 <html>
     <head>
         <title>Home</title>
         <base target="_blank">	
 		<style>
-		.col1 {
-			width: 310px;
-		}	
-		@media screen and (device-width: 360px), (device-height: 360px)  {
+		@media screen and (orientation: landscape)  {
 			.col1 {
-				width: 20px;
+				width: 310px;
+			}	
+		}
+		@media screen and (orientation: portrait)  {
+			.col1 {
+				width: 50px;
 			}
 		<!-- col for mobile -->
 		}
@@ -56,7 +58,7 @@
 			<tr>
                 <td class="col1"> </td>
                 <td class="col2">
-				<b>News1</b> <br>
+				<b>News2</b> <br>
 				<img src="https://www.spiegel.de/favicon.ico">
 					<a href="https://www.spiegel.de/wirtschaft/erdgas-versorgung-europas-im-live-tracker-speicher-pipelines-lng-a-e2986967-51d2-4c8c-9607-f3ff3e333361" rel="noreferrer noopener">Erdgasversorgung</a> <br>
 				<img src="https://www.spiegel.de/favicon.ico">
