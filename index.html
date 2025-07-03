@@ -5,19 +5,15 @@
         <title>Home</title>
         <base target="_blank">	
 		<style>
-		@media screen and (orientation: landscape) and (width >= 1000px)  {
+        @media screen and (orientation: landscape) {
 			.col1 {
-				width: 310px;
-			}	
+			   width: calc((100vw - 895px)/2);
+			}             
 		}
-		@media screen and (orientation: landscape) and (width < 1000px)  {
-			.col1 {
-				width: 70px;
-			}	
-		}
+
 		@media screen and (orientation: portrait)  {
 			.col1 {
-				width: 50px;
+			   width: 50px;
 			}
 		}
 		.col2 {
