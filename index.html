@@ -131,7 +131,18 @@
 				<img src="https://www.google.com/favicon.ico">
 					<a href="https://www.google.com/finance/beta/quote/ENR:ETR?window=5D" rel="noreferrer noopener">S Energy</a> <br>
 				<img src="https://www.google.com/favicon.ico">		
-					<a href="https://de.tradingview.com/markets/stocks-usa/" rel="noreferrer noopener">TradingView</a>					
+					<a href="https://de.tradingview.com/markets/stocks-usa/" rel="noreferrer noopener">TradingView</a> </br>
+				<input type="number" id="zahl1" placeholder="Zahl 1" style="width: 80px;">
+				<input type="text" id="ergebnis" placeholder="Ergebnis" style="width: 80p;" readonly>
+				<script>
+					const z1 = document.getElementById('zahl1');
+					const res = document.getElementById('ergebnis');
+					const multiplizieren = () => {
+					  const wert1 = parseFloat(z1.value) || 0;
+					  res.value = (wert1 * 53)-(148.38*53);
+					};
+					z1.addEventListener('input', multiplizieren);
+				  </script>
 				</td>
 
                 <td class="col3">
