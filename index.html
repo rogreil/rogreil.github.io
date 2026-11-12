@@ -115,34 +115,44 @@
 				<img src="https://www.wz.de/favicon.ico">
 					<a href="https://www.wz.de/nrw/krefeld" rel="noreferrer noopener">WZ Krefeld</a> <br> 
 				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/NVD:ETR?window=1D" rel="noreferrer noopener">NVidia 148.38</a> &emsp;					
+					<a href="https://www.google.com/finance/beta/quote/CRWD:NASDAQ?window=5D" rel="noreferrer noopener">Crowdstrike</a>  &emsp; &emsp; &emsp;
 				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/CRWD:NASDAQ?window=5D" rel="noreferrer noopener">Crowdstrike</a> <br>
+					<a href="https://www.google.com/finance/beta/quote/CRM:NYSE?window=5D" rel="noreferrer noopener">Salesforce</a>	<br> 
 				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/CRM:NYSE?window=5D" rel="noreferrer noopener">Salesforce</a> &emsp; &emsp; &emsp;	
+					<a href="https://www.google.com/finance/beta/quote/SPCX:NASDAQ?window=5D" rel="noreferrer noopener">SpaceX</a> &emsp; &emsp; &emsp;&emsp; 
 				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/SPCX:NASDAQ?window=5D" rel="noreferrer noopener">SpaceX</a> <br> 
+					<a href="https://www.google.com/finance/beta/quote/GOOG:NASDAQ?window=5D" rel="noreferrer noopener">Alphabet</a> <br>		
 				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/GOOG:NASDAQ?window=5D" rel="noreferrer noopener">Alphabet</a> &emsp; &emsp; &emsp;&emsp; 		
+					<a href="https://www.google.com/finance/beta/quote/MTE:FRA?window=5D" rel="noreferrer noopener">Micron</a>  &emsp;&emsp;&emsp;
 				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/MTE:FRA?window=5D" rel="noreferrer noopener">Micron</a>  <br>
+					<a href="https://www.google.com/finance/beta/quote/HY9H:FRA?window=5D" rel="noreferrer noopener">SK Hynix</a> <br>
 				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/HY9H:FRA?window=5D" rel="noreferrer noopener">SK Hynix</a> &emsp;&emsp;&emsp;
-				<img src="https://www.google.com/favicon.ico">
-					<a href="https://www.google.com/finance/beta/quote/ENR:ETR?window=5D" rel="noreferrer noopener">S Energy</a> <br>
+					<a href="https://www.google.com/finance/beta/quote/ENR:ETR?window=5D" rel="noreferrer noopener">S Energy</a>  &emsp;&emsp;&emsp;
 				<img src="https://www.google.com/favicon.ico">		
 					<a href="https://de.tradingview.com/markets/stocks-usa/" rel="noreferrer noopener">TradingView</a> </br>
-				<input type="number" id="zahl1" placeholder="Zahl 1" style="width: 80px;">
-				<input type="text" id="ergebnis" placeholder="Ergebnis" style="width: 80p;" readonly>
+
+					<img src="https://www.google.com/favicon.ico">
+					<a href="https://www.google.com/finance/beta/quote/NVD:ETR?window=1D" rel="noreferrer noopener">NVidia 148.38</a> <br>				
+				<input type="number" id="zahl1"  style="width: 70px;">
+				<span id="ergebnis" style="display: inline-block; width: 70px; text-align: right;"></span> 
+				<span id="ergebnisNS" style="display: inline-block; width: 60px; text-align: right;"></span> 
+				<span id="ergebnisPC" style="display: inline-block; width: 60px; text-align: right;"></span> <br>
 				<script>
 					const z1 = document.getElementById('zahl1');
 					const res = document.getElementById('ergebnis');
+					const resNS = document.getElementById('ergebnisNS');
+					const resPC = document.getElementById('ergebnisPC');
 					const multiplizieren = () => {
 					  const wert1 = parseFloat(z1.value) || 0;
-					  res.value = (wert1 * 53)-(148.38*53);
+					  const gewinn = (wert1 * 53) - (148.38 * 53);
+    				  const netto = (gewinn - 50) * 0.73;
+					  const pc= (netto / (148.38 * 53))*100;
+				      res.textContent = gewinn.toFixed(2) + " €";
+    				  resNS.textContent = netto.toFixed(2) + " €";
+					  resPC.textContent = pc.toFixed(2) + " %";
 					};
 					z1.addEventListener('input', multiplizieren);
-				  </script>
+				</script>
 				</td>
 
                 <td class="col3">
